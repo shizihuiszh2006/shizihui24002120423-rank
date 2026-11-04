@@ -1,0 +1,106 @@
+/* ============================================================
+   作者：石子卉  学号：423
+   说明：新闻排行榜（点击排行 / 评论排行）样式，一比一还原效果图
+   规范：所有 CSS 类名均以 szh_ 开头
+   ============================================================ */
+
+/* 石子卉 423 全局基础样式 */
+body {
+    margin: 0;
+    padding: 40px 0;
+    font-family: "Microsoft YaHei", "SimSun", Arial, sans-serif;
+    background: #ffffff;
+}
+
+/* 石子卉 423 排行榜整体容器 */
+.szh_rank_box {
+    width: 370px;
+    margin: 0 auto;
+    border: 1px solid #dcdcdc;
+    background: #ffffff;
+}
+
+/* 石子卉 423 顶部选项卡栏 */
+.szh_tab_bar {
+    display: flex;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+/* 石子卉 423 单个选项卡 */
+.szh_tab_item {
+    flex: 1;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    background: #dfe7f2; /* 未选中：浅蓝色底 */
+    cursor: pointer;
+    user-select: none;
+}
+
+/* 石子卉 423 选中的选项卡：白色底，右侧带浅蓝竖线分隔 */
+.szh_tab_active {
+    background: #ffffff;
+}
+
+/* 石子卉 423 两个选项卡之间的分隔线 */
+.szh_tab_item + .szh_tab_item {
+    border-left: 1px solid #dcdcdc;
+}
+
+/* 石子卉 423 排行榜列表 */
+.szh_rank_list {
+    margin: 0;
+    padding: 0 10px;
+    list-style: none;
+}
+
+/* 石子卉 423 每一行排行条目 */
+.szh_rank_item {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px dotted #cccccc; /* 虚线分隔 */
+    font-size: 14px;
+    color: #333333;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* 石子卉 423 最后一行去掉虚线 */
+.szh_rank_item:last-child {
+    border-bottom: none;
+}
+
+/* 石子卉 423 排名序号 */
+.szh_rank_num {
+    display: inline-block;
+    width: 26px;
+    color: #999999; /* 第4名之后为灰色 */
+    text-align: center;
+}
+
+/* 石子卉 423 前三名序号：橙色 */
+.szh_rank_top3 {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+/* 石子卉 423 新闻标题 */
+.szh_rank_title {
+    color: #333333;
+    text-decoration: none;
+}
+
+.szh_rank_title:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* 石子卉 423 右侧点击/评论数量 */
+.szh_rank_count {
+    float: right;
+    color: #33669c; /* 蓝紫色数字 */
+    font-family: Arial, sans-serif;
+}
